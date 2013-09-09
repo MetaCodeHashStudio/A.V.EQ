@@ -50,10 +50,12 @@ public class TrayStart {
             }
         });
      /*Get Tray Icon*/
-     Image img = Toolkit.getDefaultToolkit().getImage("G:\\NITH\\Java\\My Apps\\Sound Manager\\src\\Ico\\Icon.gif");
+//     Image img = Toolkit.getDefaultToolkit().getImage("G:\\NITH\\Java\\My Apps\\Sound Manager\\src\\Ico\\Icon.gif");
+       Image img = Toolkit.getDefaultToolkit().getImage("src\\ico\\Icon.gif");
+
      
      /*specify trayicon*/
-     TrayIcon trayIcon = new TrayIcon(img, "RAVE", popMenu);
+     TrayIcon trayIcon = new TrayIcon(img, "A.V.EQ", popMenu);
      
      /*Put Trayicon in tray*/
      SystemTray.getSystemTray().add(trayIcon);
