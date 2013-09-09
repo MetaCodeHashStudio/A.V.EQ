@@ -1,9 +1,5 @@
-
 package manager;
-/*
- * @author Runnetty
- * Runnetty's Audio & Voice Equilizer 
- */
+
 import java.awt.AWTException;
 import javax.sound.sampled.LineUnavailableException;
 import tray.TrayStart;
