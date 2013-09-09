@@ -12,13 +12,15 @@ import javax.swing.JSlider;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
+import manager.ManagerC;
+
 public class SoundManagerGUI extends JFrame
 {
 	private static final long serialVersionUID = 874341534684864135L;
 	private static JPanel contentPane;
 	private static JPanel soundBarPane;
 	public static JSlider[] slider = new JSlider[manager.ManagerC.numApps];
-	private static JLabel[] label = new JLabel[9];
+	private static JLabel[] label = new JLabel[manager.ManagerC.numApps];
 	
 	
 	public SoundManagerGUI()
@@ -72,7 +74,7 @@ public class SoundManagerGUI extends JFrame
 			gbc_slider.anchor = GridBagConstraints.CENTER;
 			gbc_slider.fill = GridBagConstraints.VERTICAL;
 			soundBarPane.add(slider[i], gbc_slider);
-			buildLabel(appName);
+			buildLabel(ManagerC.appNames[i]);
 		}
 /*		slider0 = new JSlider();
 		slider0.setOrientation(SwingConstants.VERTICAL);
