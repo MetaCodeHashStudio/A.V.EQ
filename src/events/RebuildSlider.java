@@ -1,4 +1,4 @@
-package manager;
+package events;
 
 public class RebuildSlider
 {
