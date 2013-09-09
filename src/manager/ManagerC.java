@@ -13,6 +13,7 @@ public class ManagerC
 {
 	public static int numApps = 9; // Used by SoundManagerGUI. Must be made variable.
 	public static String[] appNames = new String[numApps]; // Variable sized array to create names for apps
+	public static int[] channelNumbers = new int[numApps];
     private static float value = manager.SystemVolumeGet.value;
     public static void main(String[] args) throws AWTException, LineUnavailableException
     {
@@ -20,7 +21,7 @@ public class ManagerC
     	System.out.println("---Classes Loaded---");
     	/*Start tray*/
     	TrayStart.T();
-    	SoundManagerGUI.windowStart();
+//    	SoundManagerGUI.windowStart(); //GUI broken.
     	SystemVolumeGet.MixerStart();
         //boolean setVolume = SystemVolumeGet.Mixers(value);
         /*Check*/   
