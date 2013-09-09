@@ -17,35 +17,43 @@ import javax.sound.sampled.Port;
 /**
  * @author Runnetty
  */
-public class SystemVolumeGet {
+public class SystemVolumeGet
+{
     private static boolean mixers;
     
-    public static void MixerStart() throws LineUnavailableException{
-    System.out.println("- Mixers (Loaded)");
-    Mixers();
+    public static void MixerStart()
+    	throws LineUnavailableException
+    {
+    	System.out.println("- Mixers (Loaded)");
+    	Mixers();
     }
     
     public static float value = 0.5f;
-    public static void Mixers() throws LineUnavailableException{
-                
-                    
-                    System.out.println("");
-        Mixer.Info[] mixers = AudioSystem.getMixerInfo();
+    public static void Mixers()
+    	throws LineUnavailableException
+    {                    
+    		System.out.println("");
+    		Mixer.Info[] mixers = AudioSystem.getMixerInfo();
             System.out.println("There are " + mixers.length + " mixer info objects");
+            for
             
-            for (Mixer.Info mixerInfo : mixers) {
-               
-                System.out.println("mixer name: " + mixerInfo.getName());
-               // System.out.println(" - Windows: " + mixerInfo.getDescription());
-                
+            (Mixer.Info mixerInfo : mixers)
+            
+            {
+            	System.out.println("mixer name: " + mixerInfo.getName());
+            	// System.out.println(" - Windows: " + mixerInfo.getDescription());
+            	
                 Mixer mixer = AudioSystem.getMixer(mixerInfo);
                 //System.out.println("-" + mixer);
                 Line.Info[] lineInfos = mixer.getSourceLineInfo();
                 
-                for (Line.Info lineInfo : lineInfos) {
-                  System.out.println("  Line.Info: " + lineInfos);
-                    Line line = mixer.getLine(lineInfo);
-                    
+                for
+
+                (Line.Info lineInfo : lineInfos)
+
+                {
+                	System.out.println("  Line.Info: " + lineInfos);
+                	Line line = mixer.getLine(lineInfo);
                 }
             }
             /*
@@ -59,8 +67,8 @@ public class SystemVolumeGet {
                         //System.out.println(mixers);
                         System.out.println(control);
              */           
-                } 
-    }
+    } 
+}
     
 
 
