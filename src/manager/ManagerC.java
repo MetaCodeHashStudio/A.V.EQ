@@ -25,7 +25,7 @@ public class ManagerC
     public static void EQOpen()
     {
     	System.out.println("Opening EQ Window");
-    	SoundManagerGUI.windowStart(); // GUI Broken
+    	//SoundManagerGUI.windowStart(); // GUI Broken
 
     }
     public static void ControlsOpen()
