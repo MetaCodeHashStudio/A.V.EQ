@@ -79,15 +79,13 @@ public class TrayStart {
         		}
         	}
         );
-     /*Get Tray Icon*/
-//     Image img = Toolkit.getDefaultToolkit().getImage("G:\\NITH\\Java\\My Apps\\Sound Manager\\src\\Ico\\Icon.gif");
+     /*Get Tray Icon from ico folder*/
        Image img = Toolkit.getDefaultToolkit().getImage("src\\ico\\Icon.gif");
 
-     
        /*specify trayicon*/
        TrayIcon trayIcon = new TrayIcon(img, "A.V.EQ", popMenu);
      
-       /*Put Trayicon in tray*/
+       /*Put Trayicon in tray*/ 
        SystemTray.getSystemTray().add(trayIcon);
        System.out.println("- Tray: (Loaded)");
    
